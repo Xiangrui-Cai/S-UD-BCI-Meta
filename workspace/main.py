@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     totalRun = 9
 
-    for const_run in range(1, 3):
+    for const_run in range(2, 3):
 
         if const_run == 1:
             const_type_idx = BCI_Type.REST_EO
