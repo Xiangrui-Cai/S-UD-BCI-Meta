@@ -10,7 +10,7 @@ import time
 
 def tiqushuju2(trails):
     data9 = loadmat(
-                    r"C:\Users\lenovo\Desktop\二便范式_电刺激\workspace\data\Cent1 Sub002 Exp1 Run02 MI_zaixian" + str(trails)+".mat")
+                    r".\data\Cent1 Sub002 Exp1 Run02 MI_zaixian" + str(trails)+".mat")
     data9 = data9['data']
     b = data9.shape[-1]
     data9 = data9.reshape(32, b)
@@ -95,5 +95,15 @@ def zaixian_suanfa_null():
     runtime = end_time - start_time
     print(f"程序运行时间为 {runtime} 秒")
     return result
+
+if __name__ == "__main__":
+    # 测试代码
+    a = []
+    for i in range(1, 40):
+        result = zaixian_suanfa(i)
+        a.append(result)
+    # 提取每个数组的值并存储在一个列表中
+    values = [arr.item() for arr in a]
+    print(values)
 
 
