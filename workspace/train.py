@@ -19,7 +19,7 @@ def getModel(model_name):
     return model
 
 model = getModel('CNNNet')
-model.load_weights(r"C:\Users\lenovo\Desktop\二便范式_电刺激\workspace\model.h5")
+model.load_weights(r".\model.h5")
 
 
 def test(X_test):
